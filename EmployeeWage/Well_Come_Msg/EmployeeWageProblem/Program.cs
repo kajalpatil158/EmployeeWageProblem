@@ -1,30 +1,35 @@
 ﻿using System;
 
-namespace Employee_wage
+namespace Employee_Part_Time
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wel Come To Employee Wages ");
-            int Is_Present = 1;
+            int Is_Full_Time = 1;
+            int Is_Part_Time = 2;
+            int Emp_hr = 8;
+            int salary;
             Random random = new Random();
-            int EmpCheck = random.Next(0, 2);
-            if (EmpCheck == Is_Present)
+            int EmpCheck = random.Next(0, 3);
+            if (EmpCheck == Is_Full_Time)
             {
-                int Wage_Per_Hour = 20;
-                int Full_Day = 8;
-                //int Calculate_Emp_wage;
-                int Salary = Full_Day * Wage_Per_Hour;
-                Console.WriteLine("Employee is present:");
-                Console.WriteLine("Salary of Employee is {0}: ", Salary);
+                Console.WriteLine("Employee is Full Time:");
+                Emp_hr = 8;
+            }
+            else if (EmpCheck == Is_Part_Time)
+            {
+                Console.WriteLine("Employee is Part Time:");
+                Emp_hr = 4;
             }
             else
             {
-                int Salary = 0;
-                Console.WriteLine("Employee is Absent and salary for that is {0}", Salary);
-
+                Console.WriteLine("Employee is Absent:");
+                Emp_hr = 0;
             }
+            salary = Emp_hr * 20;
+            Console.WriteLine("{0} is salary of employee", salary);
         }
     }
 }
+
