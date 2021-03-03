@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Employee_Part_Time
+namespace Employee_Wage_Calculate
 {
     class Program
     {
@@ -8,28 +8,32 @@ namespace Employee_Part_Time
         {
             int Is_Full_Time = 1;
             int Is_Part_Time = 2;
-            int Emp_hr = 8;
+            int Is_Absent = 0;
+            int Emp_Rate_Per_hr = 20;
+            int EmpHr = 8;
             int salary;
             Random random = new Random();
             int EmpCheck = random.Next(0, 3);
-            if (EmpCheck == Is_Full_Time)
+            switch (EmpCheck)
             {
-                Console.WriteLine("Employee is Full Time:");
-                Emp_hr = 8;
+                case 1:
+                    EmpHr = 8;
+                    Console.WriteLine("Employee is Full Time Present:");
+                    salary = EmpHr * Emp_Rate_Per_hr;
+                    Console.WriteLine("Salary of employee is: {0}", salary);
+                    break;
+                case 2:
+                    EmpHr = 4;
+                    Console.WriteLine("Employee is Part Time Present:");
+                    salary = EmpHr * Emp_Rate_Per_hr;
+                    Console.WriteLine("Salary of employee is: {0}", salary);
+                    break;
+                case 3:
+                    Console.WriteLine("Employee is Absent:");
+                    salary = 0;
+                    Console.WriteLine("Salary of employee is: {0}", salary);
+                    break;
             }
-            else if (EmpCheck == Is_Part_Time)
-            {
-                Console.WriteLine("Employee is Part Time:");
-                Emp_hr = 4;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent:");
-                Emp_hr = 0;
-            }
-            salary = Emp_hr * 20;
-            Console.WriteLine("{0} is salary of employee", salary);
         }
     }
 }
-
