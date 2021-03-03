@@ -1,39 +1,42 @@
 ﻿using System;
 
-namespace Employee_Wage_Calculate
+namespace Calculate_Wages_For_Month
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int Is_Full_Time = 1;
-            int Is_Part_Time = 2;
-            int Is_Absent = 0;
-            int Emp_Rate_Per_hr = 20;
-            int EmpHr = 8;
             int salary;
+            //int Is_Full_Time = 1;
+            //int Is_Part_Time = 2;
             Random random = new Random();
             int EmpCheck = random.Next(0, 3);
-            switch (EmpCheck)
+            int Working_Day = 20;
+            int EmpHr = 8;
+            int i;
+            //int EmpCheck = random.Next(0, 3);
+            //for (i=1;i<=Working_Day;i++)
+            if (EmpCheck == 1)
             {
-                case 1:
-                    EmpHr = 8;
-                    Console.WriteLine("Employee is Full Time Present:");
-                    salary = EmpHr * Emp_Rate_Per_hr;
-                    Console.WriteLine("Salary of employee is: {0}", salary);
-                    break;
-                case 2:
-                    EmpHr = 4;
-                    Console.WriteLine("Employee is Part Time Present:");
-                    salary = EmpHr * Emp_Rate_Per_hr;
-                    Console.WriteLine("Salary of employee is: {0}", salary);
-                    break;
-                case 3:
-                    Console.WriteLine("Employee is Absent:");
-                    salary = 0;
-                    Console.WriteLine("Salary of employee is: {0}", salary);
-                    break;
+
+                EmpHr = 8;
+                Console.WriteLine("Employee is full time");
+
             }
+            else if (EmpCheck == 2)
+            {
+
+                EmpHr = 4;
+                Console.WriteLine("Employee is Part time");
+
+            }
+            else
+            {
+                EmpHr = 0;
+                Console.WriteLine("Employee is Absent:");
+            }
+            salary = EmpHr * Working_Day;
+            Console.WriteLine("Employee Working salary for month is {0}", salary);
         }
     }
 }
