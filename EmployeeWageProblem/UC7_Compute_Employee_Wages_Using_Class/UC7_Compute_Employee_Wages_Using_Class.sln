@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UC7_Compute_Employee_Wages_Using_Class", "UC7_Compute_Employee_Wages_Using_Class\UC7_Compute_Employee_Wages_Using_Class.csproj", "{CF89BC9C-F944-4517-93DA-BA7D9D5CDC6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Final_Solution", "UC7_Compute_Employee_Wages_Using_Class\Final_Solution.csproj", "{CF89BC9C-F944-4517-93DA-BA7D9D5CDC6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

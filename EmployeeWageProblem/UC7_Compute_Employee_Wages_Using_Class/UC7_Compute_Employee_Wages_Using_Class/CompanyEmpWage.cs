@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Manage_Emp_Wage_For_Multiple_company
+namespace Day4_FinalSolution
 {
     class CompanyEmpWage
     {
+
+
         public string company;
         public int empRatePerHour;
         public int numOfWorkingDays;
@@ -18,6 +20,7 @@ namespace Manage_Emp_Wage_For_Multiple_company
             this.empRatePerHour = empRatePerHour;
             this.numOfWorkingDays = numOfWorkingDays;
             this.maxHoursPerMonth = maxHoursPerMonth;
+            this.totalEmpWage = 0;
         }
 
         public void setTotalEmpWage(int totalEmpWage)
@@ -27,7 +30,7 @@ namespace Manage_Emp_Wage_For_Multiple_company
 
         public string toString()
         {
-            return "Total Emp Wage for company : " + this.company + " is : " + this.totalEmpWage;
+            return "Total Emp Wage for Company: " + this.company + " is: " + this.totalEmpWage;
         }
 
     }
